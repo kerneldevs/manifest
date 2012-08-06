@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com" />
+
+  <remote  name="github"
+           fetch=".." />
+
+  <default revision="refs/heads/master"
+           remote="github"
+           sync-j="1" />
+
+  <project path="manifest" name="kerneldevs/manifest" />
+
+  <project path="buildscripts" name="kerneldevs/buildscripts" >
+    <copyfile src="menuconfig" dest="menuconfig" />
+  </project>
+  <project path="kerneldevs" name="kerneldevs/RM-32-kernel-pecan" revision="rm-caf" />
+  
+</manifest>
